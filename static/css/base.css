@@ -3,11 +3,15 @@ html {
 }
 
 body {
-    background: url('/media/680096.jpg') no-repeat center center fixed;
+    background: url('../img/680096.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+}
+
+.body-mobile {
+    height: calc(100vh - 80px);
 }
 
 /* from Bulma */
@@ -54,6 +58,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
