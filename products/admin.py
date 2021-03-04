@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
         'categories',
         'price',
         'brand',
+        'descriptions',
     )
         
     ordering = ('id',)
