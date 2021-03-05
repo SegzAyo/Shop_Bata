@@ -2,13 +2,32 @@
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+                SORT
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}"class="dropdown-item">All Products</a>
+            <div class="dropdown-menu border-0 dropright" aria-labelledby="all-products-link">
+                <div class="submenu-item">
+                    <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item dropdown-toggle">By Price</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSubMenuLink">
+                            <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price (low to high)</a>
+                            <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">Price (high to low)</a>
+                        </div>
+                </div>
+                <div class="submenu-item">
+                    <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item dropdown-toggle">By Brand</a>
+                        <div class="dropdown-menu dropend" aria-labelledby="navbarDropdownSubMenuLink">
+                            <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item">Brand (A - Z)</a>
+                            <a href="{% url 'products' %}?sort=brand&direction=desc" class="dropdown-item">Brand (Z - A)</a>
+                        </div>
+                </div>
+                
+                <div class="submenu-item">
+                    <a href="{% url 'products' %}?sort=categories&direction=asc" data-toggle="dropdown" class="dropdown-item dropdown-toggle">By Category</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSubMenuLink">
+                            <a href="{% url 'products' %}?sort=categories&direction=asc" class="dropdown-item">Category (A - Z)</a>
+                            <a href="{% url 'products' %}?sort=categories&direction=desc" class="dropdown-item">Category (Z - A)</a>
+                        </div>
+                </div>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -57,3 +76,21 @@
         </li>
     </ul>
 </div>
+<script>
+$(document).on('click', '.dropdown-menu', function (e) {
+  e.stopPropagation();
+});
+
+// make it as accordion for smaller screens
+if ($(window).width() < 992) {
+  $('.dropdown-menu a').click(function(e){
+    e.preventDefault();
+      if($(this).next('.submenu').length){
+        $(this).next('.submenu').toggle();
+      }
+      $('.dropdown').on('hide.bs.dropdown', function () {
+     $(this).find('.submenu').hide();
+  })
+  });
+}
+</script>

@@ -10,6 +10,18 @@ body {
     font-family: 'Lato';
 }
 
+/* makes main-menu open on hover */
+@media only screen and (min-width: 768px){
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+}
+
+/* makes sub-menu S open on hover */
+.submenu-item:hover > .dropdown-menu {
+  display: block;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
