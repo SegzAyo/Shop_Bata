@@ -11,6 +11,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     imageURLs = models.URLField(max_length=1024, null=True, blank=True)
     sizes = models.CharField(max_length=254, null=True, blank=True)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.name
