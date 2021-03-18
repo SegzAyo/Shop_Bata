@@ -37,9 +37,15 @@
 
                             {% for item in cart_items %}
                                 <tr>
+                                    {% if 'item.product.imageURLs' %}
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.imageURLs }}">
+                                        <img class="img-fluid rounded" src="{{ item.product.imageURLs }}" alt="{{ item.product.name }}">
                                     </td>
+                                    {% else %}
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                    </td>
+                                    {% endif %}
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
