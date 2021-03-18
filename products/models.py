@@ -1,6 +1,14 @@
 from django.db import models
 
 class Product(models.Model):
+    CATEGORY_CHOICES = [
+        ('Sneakers', 'Sneakers'), 
+        ('Boots', 'Boots'),
+        ('Moccasins', 'Mocassins'),
+        ('Loafers', 'Loafers'),
+        ('Oxfords','Oxfords'),
+    ]
+
     categories = models.CharField(max_length=254, null=True, blank=True)
     id = models.CharField(max_length=254, blank=True, primary_key=True)
     name = models.CharField(max_length=254)
