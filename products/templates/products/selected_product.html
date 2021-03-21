@@ -14,12 +14,16 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if product.imageURLs %}
-                        <a href="{{ product.imageURLs }}" target="_blank">
+                    {% if product.image %}
+                        <a href="{% url 'selected_product' product.id %}">
+                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% elif product.imageURLs %}
+                        <a href="{% url 'selected_product' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.imageURLs }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'selected_product' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}

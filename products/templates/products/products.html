@@ -26,7 +26,11 @@
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.imageURLs %}
+                                {% if product.image %}
+                                <a href="{% url 'selected_product' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% elif product.imageURLs %}
                                 <a href="{% url 'selected_product' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.imageURLs }}" alt="{{ product.name }}">
                                 </a>
@@ -50,7 +54,7 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                    <a class="text-danger">Delete</a>
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>
