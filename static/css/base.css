@@ -91,7 +91,7 @@ logo-font {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #fff;
 	z-index: -1;
 }
 
@@ -277,4 +277,21 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
 }

@@ -38,6 +38,7 @@
                     {% else %}
                         <small class="text-muted">Brand not specified</small>
                     {% endif %}
+                    <p><a href="#reviews">{{ product.reviews.count }} reviews </a></p>
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_product' product.id %}">Edit</a> | 
@@ -109,6 +110,38 @@
                         </div>
                     </form>
                 </div>
+                <div id="reviews">
+
+                {% if product.reviews.all %}
+                    REVIEWS
+                    <hr/>
+                {% endif %}
+                
+                {% for review in product.reviews.all %}
+                <div class="card">
+                    <div class="card-body">
+                        <strong>{{ review.user.username }}</strong>
+                        <p>{{ review.text }}</p>
+                    </div>
+                </div>
+                <br/>
+                 {% empty %}
+                <div class="card">
+                    <div class="card-body">   
+                        <p>No reviews yet</p>
+                    </div>
+                </div>
+                    {% endfor %}
+            <div class="row">
+                <div class="col-12 col-lg-12">    
+                    <form action="{% url 'review_product' product.id %}" method="POST">
+                        {%  csrf_token %}
+                        {{ review_form.text }}
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <button class="btn btn-black rounded-0" type="submit">Add Review</button>
+                    </form>
+                </div>
+            </div>
             </div>
         </div>
 {% endblock %}

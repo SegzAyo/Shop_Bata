@@ -1,0 +1,1 @@
+web: gunicorn Shop_Bata.wsgi:application

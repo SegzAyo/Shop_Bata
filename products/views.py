@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Product
-from .forms import ProductForm
+from .forms import ProductForm, AskComplaintForm, ReviewForm
 
 # Create your views here.
 
@@ -71,6 +71,7 @@ def selected_product(request, product_id):
 
     context = {
         'product': product,
+        'review_form': ReviewForm()
     }
 
     return render(request, 'products/selected_product.html', context)
@@ -143,3 +144,45 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+def ask_complaint(request):
+    if request.method == "GET":
+        form = AskComplaintForm()
+
+        return render(request, 'products/ask_complaint.html', {'form': form})
+
+    if request.method == 'POST':
+        form = AskComplaintForm(request.POST)
+        if form.is_valid():
+            ask_complaint = form.save()
+            messages.success(request, 'Sent successfully!')
+        else:
+            messages.error(request, 'Please ensure the form is filled correctly!')
+        
+        return render(request, 'products/ask_complaint.html', {'form': AskComplaintForm()})
+    
+    return render(request, 'products/ask_complaint.html')
+
+
+@login_required
+def review_product(request, product_id):
+    """Review a product"""
+
+    product = get_object_or_404(Product, pk=product_id)
+    redirect_url = request.POST.get('redirect_url')
+
+    form = ReviewForm(request.POST)
+
+    if form.is_valid():
+        form.save(commit=False)
+        form.instance.user = request.user
+        form.instance.product = product
+        form.save()
+        messages.success(request, 'Your review has been submitted')
+    else:
+        messages.error(request, 'There is an error with your review')
+
+    return redirect(redirect_url)
+
+    
+    
