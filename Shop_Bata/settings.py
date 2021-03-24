@@ -205,4 +205,4 @@ STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = config('STRIPE_WH_SECRET')
 DEFAULT_FROM_EMAIL = 'shopbata@example.com'
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
