@@ -3,6 +3,7 @@ from datetime import datetime
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.crypto import get_random_string
+from django.utils import timezone
 from django.core.validators import MinValueValidator
 
 class Product(models.Model):
@@ -25,7 +26,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2, validators=[MinValueValidator(1)])
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
     sizes = models.CharField(max_length=254, null=True, blank=True)
-    created_at = models.DateTimeField(default=datetime.now)
+    created_at = models.DateTimeField(default=timezone.now)
     imageURLs = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     
@@ -45,6 +46,7 @@ class Ask_Complaint(models.Model):
     email = models.CharField(max_length=254, null=True, blank=True)
     topic = models.CharField(max_length=254, null=True, blank=True)
     detail = models.TextField()
+    created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
@@ -53,6 +55,7 @@ class Review(models.Model):
     text = models.TextField(max_length=254)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)
+    created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.text      
