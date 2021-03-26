@@ -1,0 +1,182 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "categories":"Sneakers",
+         "colors":"Black",
+         "id":"AVpfWWFJLJeJML437mXk",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/644519ad9d6f3243a620c244752f0ebd/26575970fa3d4876a3575c93526ec8e0.jpg?imwidth=1800",
+         "brand":"Nike",
+         "name":"Nike SportswearAIR Trainers",
+         "price":443.51,
+         "sizes":"8,8.5",
+         "descriptions":"Upper material: Synthetics/textileLining: TextileInsole: Textile Sole: Synthetics Padding type: Cold padding, Fabric: Mesh"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "categories":"Sneakers",
+         "colors":"Black",
+         "id":"AVpfUP5z1cnluZ0-ieDq",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/e9462cc6fcf54332bf552d9383ce67a3/b3721159982447c7bb3a139b85d90437.jpg?imwidth=1800",
+         "brand":"Adidas",
+         "name":"adidas OriginalsNMD_R1.V2 UNISEX - Trainers",
+         "price":235,
+         "sizes":"10,7,9,8,13,11,12",
+         "descriptions":"Upper material: Synthetics/textile, Lining: Textile, Insole: Textile, Sole: Synthetics, Padding type: No lining, Fabric: Knit"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "categories":"Loafers",
+         "colors":"Multicolor",
+         "id":"AVpf3fBfilAPnD_xjsQ2",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/ed601d1f061c3b2d9def7925929158e8/ec2881743b264db7957136b3f0df90a1.jpg?imwidth=1800",
+         "brand":"Jeffery West",
+         "name":"Jeffery West VEGAN SYLVIAN - Slip-ons",
+         "price":911.99,
+         "sizes":"10,11,12,8,9",
+         "descriptions":"Upper material: Textile, Lining: Textile, Insole: Imitation leather, Sole: Synthetics, Padding type: Cold padding."
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "categories":"Sneakers",
+         "colors":"Red",
+         "id":"AVpfWWFJLJeJML437mXk",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/a999ba1f0e9e35fca9f9f93bf3b03882/c2ab9fecea5e42afbf41f3526e84c8e3.jpg?imwidth=1800",
+         "brand":"Antony Morato",
+         "name":"Antony Morato BOLD METAL - Sneakers",
+         "price":449.51,
+         "sizes":"",
+         "descriptions":"Outer material :  Leather, Lining :  Imitation leather / textile, Insole :  Imitation leather, Sole :  Art Materials, Feed thickness :  Thin feed."
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "categories":"Sneakers",
+         "colors":"White",
+         "id":"AVpfUzeN1cnluZ0-ipUf",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/2e1b02823e0d334eb0687726d3b59404/730b5dfd54c0488997af083b5482776e.jpg?imwidth=1800",
+         "brand":"PULL BEAR",
+         "name":"PULL & BEAR Sneakers",
+         "price":39.99,
+         "sizes":"10.5,8.5,10,7,9.5,7.5,9,8,13,11,12",
+         "descriptions":"Outer material :  Polyester, Lining :  100% polyester,Insole :  Synthetic, Sole :  Art Materials"
+      }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "categories":"Loafers",
+         "colors":"Black",
+         "id":"AVpfO0NuilAPnD_xXuSh",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/149ad23876a43b01a50d190494928253/a208feb9b09340a290cbbb54afdc5907.jpg?imwidth=1800",
+         "brand":"Selected Homme",
+         "name":"SLHTIM TASSEL LOAFER - Slip-ins",
+         "price":419.99,
+         "sizes":"10.5,8.5,10,7,9.5,7.5,9,8,13,11,12",
+         "descriptions":"Outer material :  Leather, Lining :  Combination of leather and textile lining, Insole :  Leather, Sole :  Art Materials, Feed thickness :  Thin feed"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "categories":"Moccasins",
+         "colors":"Yellow",
+         "id":"AVpfUP5z1cnluZ0-ieDq",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/43a27328f0da4ee698ba31a2555f077b/45105aae57ce4995bea842a7f64c322c.jpg?imwidth=1800",
+         "brand":"PS Paul Smith",
+         "name":"PS Paul Smith SPRINGFIELD - Moccasins",
+         "price":23,
+         "sizes":"10,7,9,8,13,11,12",
+         "descriptions":"Outer material :  Suede, Lining :  Leather, Insole :  Leather, Sole :  Art Materials, Feed thickness :  Thin feed, Care instructions :  Impregnate the shoes before using them"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "categories":"Moccasins",
+         "colors":"Blue",
+         "id":"AVpe60UCLJeJML43yS-E",
+         "imageURLs":"http://i5.walmartimages.com/dfw/dce07b8c-9b41/k2-_e50535c0-fd20-4d6c-a486-a552ce79675d.v1.jpg",
+         "brand":"Zign",
+         "name":"Zign Moccasins",
+         "price":549.99,
+         "sizes":"9,10,7,8,11,12,13",
+         "descriptions":"Outer material :  Suede, Lining :  Leather, Insole :  Leather, Sole :  Art Materials, Feed thickness :  Thin feed,Care instructions :  Impregnate the shoes before using them."
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "categories":"Boots",
+         "colors":"Brown",
+         "id":"AVpfUP5z1cnluZ0-ieDq",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/88fd0f9e3e8537688e9b4d3e38e6a29b/daa4cba1659148eda9f90996e30ccc3d.jpg?imwidth=1800",
+         "brand":"Timberland",
+         "name":"Timberland SPRINT TREKKER MID - Lace-up boots",
+         "price":754,
+         "sizes":"10,7,9,8,13,11,12",
+         "descriptions":"Outer material :  Nubuck / textile, Lining :  Textile, Insole :  Textile, Sole :  Art Materials, Feed thickness :  Thin feed, Care instructions :  Impregnate the shoes before using them"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "categories":"Boots",
+         "colors":"Brown",
+         "id":"AVpe60UCLJeJML43yS-E",
+         "imageURLs":"https://img01.ztat.net/article/spp-media-p1/2a533447312c38018e571a6d44a9286d/d9bc833e4226481aadf44239f22cd566.jpg?imwidth=1800",
+         "brand":"Timberland",
+         "name":"Marvel Mens Spider Man Fleece Lined Slippers",
+         "price":39.99,
+         "sizes":"9,10,7,8,11,12,13",
+         "descriptions":"Timberland, LARCHMONT CHUKKA - Lace-up boots - dark brown"
+      }
+   },
+   {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "categories":"Sneakers",
+         "colors":"White",
+         "id":"AVpe9qfgLJeJML43zVGO",
+         "imageURLs":"http://i5.walmartimages.com/dfw/dce07b8c-8ad5/k2-_2ba91f08-e8c1-4763-b4a5-94c408512b31.v1.jpg",
+         "brand":"Bershka",
+         "name":"Bershka Sneakers",
+         "price":739.99,
+         "sizes":"8.5,10,7,9.5,7.5,9,8,11,12",
+         "descriptions":"Outer material :  Imitation leather / textile, Lining :  100% polyester, Insole :  Textile, Sole :  Art Materials"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "categories":"Moccasins",
+         "colors":"Brown Pu",
+         "id":"AVpfWWFJLJeJML437mXk",
+         "imageURLs":"https://i5.walmartimages.com/asr/324312bb-8d48-4df6-8c1b-ed6d7c7fa5bb_1.7bc2e9f06c892c05e0ca7f91222da945.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+         "brand":"ALDO",
+         "name":"ALDO GUYAUME  Moccasins",
+         "price":644.51,
+         "sizes":"",
+         "descriptions":"Outer material :  Suede Lining :  Textile Insole :  Imitation leather Sole :  Art MaterialsFeed thickness :  Thin feedCare instructions :  Impregnate the shoes before using them."
+      }
+   }
+]
