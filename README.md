@@ -59,6 +59,9 @@ user profile, register and login links.
 * __Search engine__ This can be used to filter down to specific results as it returns search inputs that matches
  either product name, description or category. The search engine is featured on all the pages of the website.
 
+ * __footer__ is also featured on all the pages of the site, which cantains links to other parts of the website. Aslo
+ contained in the footer is the contact information of the Shop Bata.
+
  * __Product page__ This is where all the products are displayed, with the most recent listed on the top of the product page. 
  Each product is displayed in a card that features the product image, price and brand, the product images are links to 
  the selected product on a click, opening the selected product page for more details about the product. On the selected 
@@ -87,6 +90,17 @@ it informs the customer of action, error warnings or confirms a successful actio
 update profile button at the bottom of the form. Also featured on the user profile page is order history of the 
 logged in customer.
 
+
+## Technology Used
+
+**Products Model**
+![alt text](static/img/products=model.png)
+
+**Asl/Complaint Model Model**
+![alt text](static/img/ask-complaint_model.png)
+
+**Asl/Complaint Model Model**
+![alt text](static/img/review-model.png)
 
 
 ## Technology Used
