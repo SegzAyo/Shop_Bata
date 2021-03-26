@@ -27,6 +27,7 @@ class AskComplaintForm(forms.ModelForm):
     class Meta:
         model = Ask_Complaint
         fields = '__all__'
+        exclude = ('created_at', )
 
 
 

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from .models import Product
@@ -9,6 +10,8 @@ from .forms import ProductForm, AskComplaintForm, ReviewForm
 
 def all_products(request):
     """ A view to show all product, including sorting and search queries """
+
+    page = request.GET.get('page', 1)
 
     products = Product.objects.all().order_by('-created_at')
     query = None
@@ -50,10 +53,20 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(descriptions__icontains=query) | Q(categories__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'        
+    current_sorting = f'{sort}_{direction}'  
+
+    paginator = Paginator(products, 12)
+
+    try:
+        products_paginated = paginator.page(page)
+    except PageNotAnInteger:
+        products_paginated = paginator.page(1)
+    except EmptyPage:
+        products_paginated = paginator.page(paginator.num_pages)
 
     context = {
         'products': products,
+        'products_paginated': products_paginated,
         'search_term': query,
         'current_brand': Brand,
         'current_sorting': current_sorting,

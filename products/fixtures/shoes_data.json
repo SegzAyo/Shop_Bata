@@ -166,5 +166,125 @@
          "sizes":"",
          "descriptions":"Outer material :  Suede Lining :  Textile Insole :  Imitation leather Sole :  Art MaterialsFeed thickness :  Thin feedCare instructions :  Impregnate the shoes before using them."
       }
-   }
+   },
+	{
+		"pk": 12,
+		"model": "products.product",
+		"fields": {
+			"categories": "Moccasins",
+			"colors": "Brown Pu",
+			"imageURLs": "https://i5.walmartimages.com/asr/324312bb-8d48-4df6-8c1b-ed6d7c7fa5bb_1.7bc2e9f06c892c05e0ca7f91222da945.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+			"brand": "ALDO",
+			"name": "ALDO GUYAUME  Moccasins",
+			"price": 644.51,
+			"sizes": "",
+			"descriptions": "Outer material :  Suede Lining :  Textile Insole :  Imitation leather Sole :  Art MaterialsFeed thickness :  Thin feedCare instructions :  Impregnate the shoes before using them."
+		}
+	},
+	{
+			"pk": 13,
+			"model": "products.product",
+			"fields": {
+				"categories": "Sneakers",
+				"colors": "White",
+				"id": "AVpfWWFJLJeJML437mXk",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/813361b1609d4114bc3ee84a392d96a3/202ec5e32f89411c95e2bfdb525cd819.jpg?imwidth=1800",
+				"brand": "Mario Valentino",
+				"name": "Valentino by Mario Valentino Sneakers",
+				"price": 395.55,
+				"sizes": "8,8.5",
+				"descriptions": "Outer material :  Leather, Lining :  Leather, Insole :  Leather, Sole :  Art Materials, Feed thickness :  Thin feed"
+		}
+    },
+    {
+			"pk": 14,
+			"model": "products.product",
+			"fields": {
+				"categories": "Sneakers",
+				"colors": "Black",
+				"id": "AVpfUP5z1cnluZ0-ieDq",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/7e969a37a723325a966098f3abe559a3/3c0aed35ffc84df48b5a4887aabf6f95.jpg?imwidth=1800",
+				"brand": "Nike",
+				"name": "Nike Sportswear",
+				"price": 320,
+				"sizes": "10,7,9,8,13,11,12",
+				"descriptions": "Outer material :  Leather and textile, Lining :  Textile, Insole :  Textile, Sole :  Art Materials, Feed thickness :  Thin feed, Care instructions :  Impregnate the shoes before using them"
+			}
+		},
+		{
+			"pk": 15,
+			"model": "products.product",
+			"fields": {
+				"categories": "Loafers",
+				"colors": "White",
+				"id": "AVpf3fBfilAPnD_xjsQ2",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/5fedfa4e347f49a0ba05af678e8b0160/cab355a5a66847138fab0310c479705c.jpg?imwidth=1800",
+				"brand": "Pier One",
+				"name": "Pier One UNISEX - Sneakers",
+				"price": 650.99,
+				"sizes": "10,11,12,8,9",
+				"descriptions": "Outer material :  Textile, Lining :  Textile, Insole :  Textile, Sole :  Art Materials, Feed thickness :  Thin feed, Fabric :  Mesh, canvas."
+			}
+		},
+		{
+			"pk": 16,
+			"model": "products.product",
+			"fields": {
+				"categories": "Sneakers",
+				"colors": "Black",
+				"id": "AVpfWWFJLJeJML437mXk",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/088caf79794434d2bb5eaf9fcb31c58f/97d6f2f518094e7089a70cd13e0bd6ea.jpg?imwidth=1800",
+				"brand": "Tommy Jeans",
+				"name": "Tommy Jeans LIFESTYLE MIX RUNNER - Sneakers",
+				"price": 659.50,
+				"sizes": "",
+				"descriptions": "Outer material :  Leather and textile, Lining :  Textile, Insole :  Textile, Sole :  Art Materials, Feed thickness :  Thin feed Care instructions :  Impregnate the shoes before using them."
+			}
+		},
+		{
+			"pk": 17,
+			"model": "products.product",
+			"fields": {
+				"categories": "Boot",
+				"colors": "Black",
+				"id": "AVpfUzeN1cnluZ0-ipUf",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/dcb6d36d9a3e3ce2b9d608eadad10b1e/ee88e356133144a9ba3ff0f3eb3fe180.jpg?imwidth=1800",
+				"brand": "Dr. Martens",
+				"name": "Dr. Martens 1460 BOOT - Lace-up boots",
+				"price": 1500.99,
+				"sizes": "10.5,8.5,10,7,9.5,7.5,9,8,13,11,12",
+				"descriptions": "Outer material :  Leather, Lining :  Leather, Insole :  Leather-textile combination, Sole :  Abrasion-resistant rubber, Feed thickness :  Thin feed"
+			}
+		},
+		{
+			"pk": 18,
+			"model": "products.product",
+			"fields": {
+				"categories": "Boots",
+				"colors": "Brown",
+				"id": "AVpfO0NuilAPnD_xXuSh",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/8736a63ac91a398caba52eb0494d2ca2/fb09fe51c51a4ff29a0c0b9567f3c4d3.jpg?imwidth=1800&filter=packshot",
+				"brand": "Timberland",
+				"name": "Timberland EARTHKEEPERS STORMBUCKS - Lace-up boots",
+				"price": 1619.99,
+				"sizes": "10.5,8.5,10,7,9.5,7.5,9,8,13,11,12",
+				"descriptions": "Outer material :  Leather, Lining :  Polyester, Insole :  Textile, Sole :  Abrasion-resistant rubber"
+			}
+		},
+		{
+			"pk": 19,
+			"model": "products.product",
+			"fields": {
+				"categories": "Moccasins",
+				"colors": "Blue",
+				"id": "AVpe60UCLJeJML43yS-E",
+				"imageURLs": "https://img01.ztat.net/article/spp-media-p1/91caa9daa8f337a4bdd78d879dc357a1/ee8d4a1b36214beb9405e77644a2631d.jpg?imwidth=1800",
+				"brand": "Giorgio 1958",
+				"name": "Giorgio 1958 Moccasins",
+				"price": 450.99,
+				"sizes": "9,10,7,8,11,12,13",
+				"descriptions": "Outer material :  Suede, Lining :  Leather, Insole :  Leather, Sole :  Art Materials, Feed thickness :  Thin feed, Care instructions :  Impregnate the shoes before using them."
+		}
+	}  
 ]
+		
