@@ -86,6 +86,9 @@ with order details and a confirmation email sent to the customer.
 * __Notification messages__ This is an intuitive messaging functionality used to communicate with the customer, 
 it informs the customer of action, error warnings or confirms a successful action.
 
+* __Ask question | Complaint page__ This page features a form that a logged in customer can use to ask the admin 
+a question or lodge complaint.
+
 * __User profile__ The user profile page contains the information of the logged in customer in a form with an 
 update profile button at the bottom of the form. Also featured on the user profile page is order history of the 
 logged in customer.
@@ -141,34 +144,47 @@ The following tools were used to validate and beautify the codes:
 * [Freeformatter](https://www.freeformatter.com/html-formatter.html#ad-output) used to beautify the HTML code.
 * [BeautyTools](http://beautifytools.com/css-validator.php) used to beautify and validate the Javascript and CSS codes.
 
-The navigation and buttons on this website has been tested, navigations all links to indended pages and the buttons 
-functions as expected.
-The authentication requires an email and password to login, giving access to more functionalities and pages such as user profile,
-update profile, list items, update and deleting of items listed by same user.
-This website database is mongoDB and all the endpoints created to carry out CRUD operations works properly; registered 
-users of this website can create, read, update and delete data in the database.
+All the app on Shop Bata has been tested out every functionality works as intended. The navition links featured on 
+every page of the site links the intended pages.
 
 ### Limitations
-* Marketsquare does not have location feature therefore can not connect buyer and seller based on proximity.
-* Marketsquare requires authentication for only buyers therefore there is no chat functionality between a buyer and seller.
-* There is no shopping cart functionality currently on Marketsquare website.
-
+* Lost password recovery funxtionality is a feature not yet implemented on Shop Bata
+* Customer care chat functionality is not feateured yet on this site.
 
 ## Deployment
-Hope Diagnostics is deployed and hosted on github pages.
-At the setup stage of this project, it was connected to Heroku such that every Git push automatically updates on Heroku.
-Files required by Heroku such as Procfile and requirements.txt have been added.
-On the deployment page, GitHub is selected as the method, then deploy button was clicked for it to build and generate url.
+Shop Bata is deployed on Heroku and the following steps were taken during deployment;
+
+* Sign up on Heroku and create app to host the project code
+* Create a free plan of  PosgreSQL database
+* Setup the setting of the database on settings.py
+* Install all necessary plugins and freeze requirements.txt to ensure heroku runs properly
+* Ensure all sensitive key are save in .env or env.py and also ensure they are saved on environment variable in Heroku.
+* Connect Heroku to repository on Heroku for automatic deployment.
+* Create AWS account and open S3, create group user and generate policy
+* Create S3 bucket to hold all the static and image files.
+* Connect S3 to repository and Heroku with AWS keys.
+* Commit and push from your repository, and confirm your images and static are loadrd on AWS.
+
 
 ## Credits
 ### Media
-* All product images and urls use on this project was sourced from Zalando.se while the landing page image was gotten from https://tblon.com/blogs/news/wingtip-shoes-relaxed-and-stylish
-    * [Pexels](https://www.pexels.com/)
+* All product images and urls use on this project were sourced from Zalando.se 
+while the landing page image was gotten from 
+https://tblon.com/blogs/news/wingtip-shoes-relaxed-and-stylish
+    
 
 ## Acknowledgement
+Shop Bata was inspired by Ado Boutique project,modelled after it except for the models, 
+and some functionalities that were not implemented in Boutique Ado. 
+The following videos were very instrumental in implementing django;
+* [Animate on scroll](https://www.youtube.com/watch?v=ptfUwPJbGlQ/)
+* [Django pagination](https://www.youtube.com/watch?v=Z8MDdDyB_6A&t=447s/)
+* [Django datetime](https://www.youtube.com/watch?v=Lyq7Bn4c6Kc/)
 
-Special thanks to my mentor Jonathan Munz for his guidance and advises through this project and also projects.
-I also want to thank my personal tutor Yeku Chetat for his patience, taking time to explain and answer my many questions.
+
+Special thanks to Code Institute Student Care team for their guidance and advises throughout all the projects and the lessons especially 
+Sheryl,for her patience intentionality to help out.
+I also want to thank my mentor Jonathan Munz, for his advises and encuragement all through the program.
 
 I recieved inspiration and references from the following sources:
 * [Adidas](https://www.adidas.com/us/men-shoes/)
