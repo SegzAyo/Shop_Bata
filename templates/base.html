@@ -134,7 +134,14 @@
         </div>
     {% endif %}
 
-    <!--FOOTER -->
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+        <!--FOOTER -->
 <footer class="container-fluid page-footer font-small mdb-color pt-4 text-light bg-dark">
 
   <!-- Footer Links -->
@@ -145,7 +152,7 @@
 
       <!-- Grid column -->
       <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <a href="{{ url_for('get_products') }}"><h6 class=" mb-4 footer-brand">marketSquare</h6></a>
+        <a href=""><h6 class=" mb-4 footer-brand">marketSquare</h6></a>
         <p>Marketsquare is an online market place designed to bridge the gap between buyers and 
 sellers by providing a website where individuals, retail, and wholesale stores can 
 advertise their products.</p>
@@ -163,23 +170,23 @@ advertise their products.</p>
       <!-- Grid column -->
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
         <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-        {% set user_id = session["user_id"]%}
-        {% if session["user"] %}
+        
+        {% if session.user %}
             <p>
-                <a class="text-light" href="{{ url_for('update_profile', userId=user_id) }}">User profile</a>
+                <a class="text-light" href="">User profile</a>
             </p> 
             <p>
-                <a class="text-light" href="{{ url_for('sign_out') }}">Log out</a>
+                <a class="text-light" href="">Log out</a>
             </li>
             <p>
-                <a class="text-light" href="{{ url_for('list_product', userId=user_id) }}">List new product</a>
+                <a class="text-light" href="">List new product</a>
             </li>
-            {% else %}
+        {% else %}
         <p>
-            <a class="text-light" href="{{ url_for('register') }}">Register</a>
+            <a class="text-light" href="">Register</a>
         </p>
         <p>
-            <a class="text-light" href="{{ url_for('login') }}">Log in</a>
+            <a class="text-light" href="">Log in</a>
         </p>
          {% endif %}
       </div>
@@ -254,13 +261,6 @@ advertise their products.</p>
   </div>
   <!-- Footer Links -->
 </footer>
-
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
 
     {% block postloadjs %}
         <script type="text/javascript">
