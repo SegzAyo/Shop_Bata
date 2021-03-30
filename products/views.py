@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.db.models import Q
@@ -178,24 +179,27 @@ def ask_complaint(request):
 
 
 @login_required
+@require_POST
 def review_product(request, product_id):
     """Review a product"""
 
-    product = get_object_or_404(Product, pk=product_id)
-    redirect_url = request.POST.get('redirect_url')
+    if request.method == "POST":
+        product = get_object_or_404(Product, pk=product_id)
+        redirect_url = request.POST.get('redirect_url')
 
-    form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST)
 
-    if form.is_valid():
-        form.save(commit=False)
-        form.instance.user = request.user
-        form.instance.product = product
-        form.save()
-        messages.success(request, 'Your review has been submitted')
-    else:
-        messages.error(request, 'There is an error with your review')
+        if form.is_valid():
+            form.save(commit=False)
+            form.instance.user = request.user
+            form.instance.product = product
+            form.save()
+            messages.success(request, 'Your review has been submitted')
+        else:
+            messages.error(request, 'There is an error with your review')
 
-    return redirect(redirect_url)
+        return redirect(redirect_url)
 
-    
-    
+
+        
+        

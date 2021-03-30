@@ -102,6 +102,10 @@ logo-font {
     background: #001d3d !important;
 }
 
+.reviewCard {
+    background-color: #e5e5e5;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -311,6 +315,13 @@ input[name='q']::placeholder {
     min-height: 100%;
     opacity: 0;
     cursor: pointer;
+}
+
+/* review textbox styling */
+
+#id_text {
+    height: 60px !important;
+    margin: 8px;
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
