@@ -219,3 +219,6 @@ I also want to thank my mentor Jonathan Munz, for his advises and encuragement a
 I recieved inspiration and references from the following sources:
 * [Adidas](https://www.adidas.com/us/men-shoes/)
 * [Gucci](https://www.gucci.com/se/en_gb/ca/men/shoes-for-men-c-men-shoes/)
+
+### CONTACT
+jcide22@gmail.com
