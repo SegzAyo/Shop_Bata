@@ -164,6 +164,8 @@ with details of the order.
 * I then opened the register page and sign up on the website.
 * I opened the Ask question form and filled to ask for an update on a formally listed product.
 
+* __Card__ payment test number: 5555 5555 5555 4444 04/40 424 24242
+
 
 The following tools were used to validate and beautify the codes:
 * [Freeformatter](https://www.freeformatter.com/html-formatter.html#ad-output) used to beautify the HTML code.
