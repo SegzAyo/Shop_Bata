@@ -231,7 +231,7 @@ DEFAULT_FROM_EMAIL = 'shopbata@example.com'
 
 if  config('DEVELOP', ''):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'info@shopbata.com'
+    DEFAULT_FROM_EMAIL = 'confirmation@shopbata.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True

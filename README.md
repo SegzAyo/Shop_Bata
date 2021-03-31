@@ -69,6 +69,9 @@ user profile, register and login links.
  shopping cart or return to the main product page. 
  ![alt text](static/img/Shop_bata_products-20.jpg)
 
+ * __Product review__ Allows a logged in customer to write a review about  selected product, which will be visible to 
+ every other customer that visits the product after then.
+
 * __Authentication__ This consists of the login and register page, and also gives access to the user profile page. On the 
 register page, some basic information such as username, email and password are required to sign up, creating a user 
 profile for the customer. On the sign in page, username and password are required of the customers, provided they 
@@ -94,7 +97,7 @@ update profile button at the bottom of the form. Also featured on the user profi
 logged in customer.
 
 
-## Technology Used
+## Information Architecture
 
 **Products Model**
 ![alt text](static/img/products=model.png)
@@ -140,12 +143,32 @@ logged in customer.
 
 
 ## Test
+All the app on Shop Bata has been tested out every functionality works as intended. The navition links featured on 
+every page of the site links the intended pages.
+Shop Bata website was manually tested, the functionality and the navigation was tested as follows.
+As a customer looking to buy shoes;
+* I entered Shop Bata url into my browser and it opens the landing page.
+* On the landing page, I clicked the Shop Now button and it linked the products page.
+* I browsed the products using the filter options in the menu bar, and got results as expected.
+* I also searched using either name, description or or category to search for product and search 
+results were returned accordingly.
+* I clicked a product to view more details and it opens the selected product page with more 
+details and reviews about the product.
+* I clicked add to cart button and I got a notification message that product was added to cart successfuly.
+* After selecting a few more products, I clicked the shopping cart button on the menu bar and 
+the shopping cart page opened with the list of my selected products and their total cost.
+* I then clicked the checkout button and a page with a form and card payment input opened.
+* I filled in the required details and completed the checkout, and a confirmation page opens 
+with details of the order.
+* A confirmation email was sent to me as stated on the confirmation page.
+* I then opened the register page and sign up on the website.
+* I opened the Ask question form and filled to ask for an update on a formally listed product.
+
+
 The following tools were used to validate and beautify the codes:
 * [Freeformatter](https://www.freeformatter.com/html-formatter.html#ad-output) used to beautify the HTML code.
 * [BeautyTools](http://beautifytools.com/css-validator.php) used to beautify and validate the Javascript and CSS codes.
 
-All the app on Shop Bata has been tested out every functionality works as intended. The navition links featured on 
-every page of the site links the intended pages.
 
 ### Limitations
 * Lost password recovery funxtionality is a feature not yet implemented on Shop Bata
@@ -156,26 +179,33 @@ Shop Bata is deployed on Heroku and the following steps were taken during deploy
 
 * Sign up on Heroku and create app to host the project code
 * Create a free plan of  PosgreSQL database
+* Install dj-database-url and psycho2-binary
 * Setup the setting of the database on settings.py
 * Install all necessary plugins and freeze requirements.txt to ensure heroku runs properly
-* Ensure all sensitive key are save in .env or env.py and also ensure they are saved on environment variable in Heroku.
+* Ensure all sensitive key are save in .env or env.py and also ensure they are saved on 
+environment variable in Heroku. See requirements.txt
 * Connect Heroku to repository on Heroku for automatic deployment.
 * Create AWS account and open S3, create group user and generate policy
 * Create S3 bucket to hold all the static and image files.
 * Connect S3 to repository and Heroku with AWS keys.
 * Commit and push from your repository, and confirm your images and static are loadrd on AWS.
+* To run on gitpod ensure all the plugin listed on requirements.txt is installed and DEVELOP equals True
+* Ensure all fixtures are loaded with 'python3 manage.py loaddata <fixturename>'
+* Ensure all models are migrated when created and also after any chenges are made on them.
 
 
 ## Credits
 ### Media
-* All product images and urls use on this project were sourced from Zalando.se 
+* All product and image urls use on this project were sourced from Zalando.se 
 while the landing page image was gotten from 
 https://tblon.com/blogs/news/wingtip-shoes-relaxed-and-stylish
     
 
 ## Acknowledgement
-Shop Bata was inspired by Ado Boutique project,modelled after it except for the models, 
-and some functionalities that were not implemented in Boutique Ado. 
+Shop Bata was inspired by Ado Boutique project, and the templates 
+and views codes were modelled after Ado Boutique with some modification, 
+except for the models, and some functionalities that were not implemented 
+in Boutique Ado. 
 The following videos were very instrumental in implementing django;
 * [Animate on scroll](https://www.youtube.com/watch?v=ptfUwPJbGlQ/)
 * [Django pagination](https://www.youtube.com/watch?v=Z8MDdDyB_6A&t=447s/)
